@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Introducing Moritz Beller</title>
+<title>Moritz Beller</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="">
 <meta name="author" content="Moritz Beller">
@@ -27,15 +27,6 @@ body {
 
 .container-narrow>hr {
 	margin: 30px 0;
-}
-
-/* Supporting marketing content */
-.marketing {
-	margin: 60px 0;
-}
-
-.marketing p+h4 {
-	margin-top: 28px;
 }
 
 h3:before {
@@ -64,7 +55,7 @@ h3:before {
 					<li class="active"><a href="#news">News</a></li>
 					<li><a href="#about">About</a></li>
 					<li><a href="#cv">CV</a></li>
-					<li><a href="#linkedin">Links</a></li>
+					<li><a href="#links">Links</a></li>
 					<li><a href="#contact">Contact</a></li>
 				</ul>
 				<h1>Moritz Beller</h1>
@@ -73,7 +64,8 @@ h3:before {
 		<div class="row-fluid">
 
 			<div class="span3">
-				<img src="mbeller_photo.png" rel="tooltip" title="Yup, that's me.">
+				<img src="mbeller_photo.png" data-placement="bottom" rel="tooltip"
+					title="Yup, that's me.">
 			</div>
 
 			<div class="span9 well lead">
@@ -83,7 +75,9 @@ h3:before {
 					semester.</p>
 				<p>This is a website about me and what I do. Feel free to
 					contact me.</p>
-				<p>Yours Moritz</p>
+				<p>
+					<img src="yours.png">
+				</p>
 			</div>
 
 			<div class="span12">
@@ -93,7 +87,8 @@ h3:before {
 				<p>
 					<span class="label label-info">28/1/2013</span> I am eager to do my
 					Master's thesis abroad, preferably in the US. If you have the
-					possibility to arrange something, please do get in touch with me.
+					possibility to arrange something, please <a href="#contact">do
+						get in touch with me.</a>
 				</p>
 				<p>
 					<span class="label">28/1/2013</span> Launch of my personal website.
@@ -105,33 +100,37 @@ h3:before {
 				<div class="row-fluid">
 					<div class="span6">
 						<h4>Enthusiast</h4>
+						<p>I am an absolute enthusiast in everything I do. In my
+							studies, I focus on Software Engineering, and Software Quality
+							more specifically. In my job as a student temp, I mainly work as
+							a Java developer with Eclipse. I have a strong focus on writing
+							maintainable, easy-to-understand source code. Being an ArchLinux
+							user, I naturally like doing things in the shell.</p>
 						<p>
-							I am an absolute enthusiast in everything I do. In my studies, I
-							focus on Software Engineering, and Software Quality more
-							specifically. In my job as a student temp, I mainly work as a
-							Java developer with Eclipse. I have a strong focus on writing
-							maintainable, easy-to-understand source code. To catch up with
-							the latest trends in computer science, I am a regular <a
-								href="http://fg-sre.gi.de/archiv/wsr/wsr-2012.html">attendee</a>
+							To catch up with the latest trends in computer science, I am a
+							regular <a href="http://fg-sre.gi.de/archiv/wsr/wsr-2012.html">attendee</a>
 							at <a href="http://www.campus-party.eu/2012/">major</a> <a
 								href="http://www.sigs-datacom.de/oop2013/oop2013.html">conferences</a>.
-							I enjoy giving presentations myself. After I have finished my
+							I really enjoy giving presentations myself. After finishing my
 							Master, I want to do a doctorate degree.
 						</p>
-						<h4>Study progress</h4>
+						<h4>Student</h4>
 						<div class="progress progress-success progress-striped"
-							rel="tooltip" title="Study progress: 60/120 ECTS reached.">
+							rel="tooltip" data-placement="bottom"
+							title="Study progress: 60/120 ECTS reached.">
 							<div class="bar" style="width: 50%">Study-O-Meter</div>
 						</div>
+						<p>I do not only study pure Computer Science, but I have
+							sports as my minor field of study.</p>
 					</div>
 					<div class="span6">
 						<h4>Sportsman</h4>
-						<p>In my leisure time, I enjoy doing sports. I have lately
-							developed a fascination with Olympic weight lifting. When I am
-							not in the gym, I like the mountains a lot. In the winter for
-							skiing, and in the summer for hiking and mountainbiking. From
-							time to time, you will find me running around the English Garden
-							in Munich.</p>
+						<p>In my leisure time, I enjoy doing sports. After seven years
+							of competitive table tennis, I have lately developed a
+							fascination with Olympic weight lifting. When I am not in the
+							gym, I like the mountains a lot. In the winter for skiing, and in
+							the summer for hiking and mountainbiking. From time to time, you
+							will find me running around the English Garden in Munich.</p>
 						<h4>Philosopher</h4>
 						<p>Having a classicist's background from school, I like
 							language and speaking in general. Thus, I always try to improve
@@ -162,7 +161,7 @@ h3:before {
 					<tr>
 						<td>9/2008–9/2011</td>
 						<td><strong>B.Sc. Computer Science,</strong> Technische
-							Universität München.</td>
+							Universität München, 2.0.</td>
 					</tr>
 					<tr>
 						<td>9/1999–6/2008</td>
@@ -253,7 +252,7 @@ h3:before {
 					</tr>
 				</table>
 
-				<h3 id="linkedin">
+				<h3 id="links">
 					<i class="icon-globe"></i> Links
 				</h3>
 				<dl class="dl-horizontal">
@@ -295,7 +294,7 @@ h3:before {
 				<p>
 					The best and easiest way to get in touch with me is to write me an
 					email: bell<img src="atcharacter.png"
-						style="vertical-align: text-top;">in.tum.de (which is
+						style="vertical-align: text-top;">in.tum.de (that is,
 					&lt;my_surname&gt;@in.tum.de).
 				</p>
 
@@ -306,16 +305,18 @@ h3:before {
 			<div class="footer">
 				<hr>
 				<p style="text-align: center;">
-					<small>Made with all the love in the world and <a href="">Bootstrap</a>
-						and <a href="">FontAwesome</a>.
+					<small>Made with all the love in the world and <a
+						href="http://twitter.github.com/bootstrap/">Bootstrap</a> & <a
+						href="http://fortawesome.github.com/Font-Awesome/">FontAwesome</a>.
 					</small>
 				</p>
 			</div>
 		</div>
+	</div>
 
-		<script src="http://code.jquery.com/jquery-latest.js"></script>
-		<script src="bootstrap/js/bootstrap.js"></script>
-		<script type='text/javascript'>
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script src="bootstrap/js/bootstrap.js"></script>
+	<script type='text/javascript'>
      $(document).ready(function () {
      if ($("[rel=tooltip]").length) {
      $("[rel=tooltip]").tooltip();
