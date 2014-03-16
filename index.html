@@ -45,7 +45,6 @@ h3:before {
 </head>
 
 <body data-spy="scroll" data-target="#navbarHead">
-
 	<div class="container-narrow">
 		<div class="navbar-fixed-top navbar-inner" id="navbarHead">
 			<div class="container-narrow">
@@ -88,11 +87,12 @@ h3:before {
 				</div>
 				<div class="span10">
 					Our paper “Modern Code Reviews in Open-Source Projects: Which
-					Problems Do They <del>Find</del> Fix?” (together with <a
-						href="http://sback.it/">Alberto Bacchelli</a>, <a
-						href="http://www.st.ewi.tudelft.nl/~zaidman/">Andy Zaidman</a> and
-					<a href="https://www4.in.tum.de/~juergens/">Elmar Jürgens</a>) was
-					accepted at MSR 2014! Thank you, dear co-authors!
+					Problems Do They
+					<del>Find</del>
+					Fix?” (together with <a href="http://sback.it/">Alberto
+						Bacchelli</a>, <a href="http://www.st.ewi.tudelft.nl/~zaidman/">Andy
+						Zaidman</a> and <a href="https://www4.in.tum.de/~juergens/">Elmar
+						Jürgens</a>) was accepted at MSR 2014! Thank you, dear co-authors!
 				</div>
 			</div>
 
@@ -192,9 +192,9 @@ h3:before {
 				<tr>
 					<td style="width: 25%">Conference Paper</td>
 					<td><strong>Modern Code Reviews in Open-Source
-							Projects: Which Problems Do They <del>Find</del> Fix?</strong> in 11th Working
-						Conference on Mining Software Repositories, Hyderabad (India),
-						2014.</td>
+							Projects: Which Problems Do They <del>Find</del> Fix?
+					</strong> in 11th Working Conference on Mining Software Repositories,
+						Hyderabad (India), 2014.</td>
 				</tr>
 				<tr>
 					<td style="width: 25%">Master's Thesis</td>
@@ -434,6 +434,22 @@ h3:before {
 				$("[rel=tooltip]").tooltip();
 			}
 		});
+	</script>
+	<script>
+		(function(i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r;
+			i[r] = i[r] || function() {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date();
+			a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+			a.async = 1;
+			a.src = g;
+			m.parentNode.insertBefore(a, m)
+		})(window, document, 'script',
+				'http://www.google-analytics.com/analytics.js', 'ga');
+
+		ga('create', 'UA-49032236-1', 'tudelft.nl');
+		ga('send', 'pageview');
 	</script>
 </body>
 </html>
