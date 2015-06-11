@@ -153,6 +153,15 @@ h3:before {
 					accepted at the ICSE NIER track 2015! Thank you, dear co-authors!
 				</div>
 			</div>
+
+
+			<div class="btn-toolbar"><br></div>
+			<div class="progress progress-info progress-striped"
+					rel="tooltip" data-placement="bottom" 
+					title="Progress: 0%" id="progresstooltip">
+					<div class="bar" style="width: 0%" id="progressometer">PhD-O-Meter</div>
+				</div>
+			<div class="control-group"></div>
 			<hr>
 
 
@@ -171,16 +180,16 @@ h3:before {
 				<p>
 					As a researcher, my interest lies in the broad domain of Software
 					Engineering, with a tendency towards its practical applications and
-					empirical studies. More specifically, I am interested in finding
-					out how to improve Software Quality. In the <a
+					empirical studies on software quality and how to improve it. In the <a
 						href="http://www.testroots.org">TestRoots
-						project</a>, I work on Developer Testing, but I am also excited about
-					Code Reviews.
+						project</a>, which is the focus of my PhD, I do this by 
+					researching Developer Testing. However, I am also excited about
+					static code analysis, which includes code reviews.
 				</p>
 				<p>
 				<h4>Quality Enthusiast</h4>
 				<p>I am an absolute enthusiast in what I do. During my studies,
-					I already focused on Software Quality. I also contributed to the
+					I already focused on Software Quality. I also was a core committer of the
 					open-source software quality analysis toolkit ConQAT. Consequently,
 					I have a focus on writing maintainable, easy-to-understand source
 					code.</p>
@@ -188,26 +197,22 @@ h3:before {
 				<h4>Student</h4>
 				<p>I studied at Techincal Unviersity of Munich, Germany, and
 					Linköpings Universitet, Sweden. On top of Software Engineering as
-					my main subject, I chose a research-oriented Master education, in
-					which I published my first paper. I took Sports and Medicine as my
-					minor fields of study.</p>
-				<div class="progress progress-success progress-striped"
-					rel="tooltip" data-placement="bottom"
-					title="Study progress: 120/120 ECTS reached. :)">
-					<div class="bar" style="width: 100%">Study-O-Meter</div>
-				</div>
-				<h4>Sportsman</h4>
+					my main subject, I chose a research-oriented Master education. I took Sports 
+					and Medicine as my minor fields of study.</p>
+				<h4>Sportsman*</h4>
 				<p>In my leisure time, I enjoy sports. After years of
-					competitive table tennis, I have lately started with Olympic weight
-					lifting. Besides these indoor activities, I like the mountains. In
-					the winter for skiing, and in the summer for hiking and a bit of
+					competitive table tennis, I have started with Olympic weight
+					lifting. Besides these indoor activities, I like the mountains, especially now
+					that I live in the Netheralnds. In the winter for skiing, and in the summer 
+					for hiking and a bit of
 					mountainbiking. From time to time, I go for a run (not really my
 					favoured sport, though).</p>
-				<h4>Thinker</h4>
+				<h4>Languages</h4>
 				<p>Having a classicist's background (Latinum and Graecum), I
 					like language and speaking in general. From my abroad studies, I
 					have a particular interest in Swedish culture. Besides I like to
 					pay attention to the little language details that matter.</p>
+				<p><small>*) I wished &hellip; ;)</small></p>
 			</div>
 		</div>
 
@@ -397,7 +402,7 @@ h3:before {
 				<tr>
 					<td>Scholarship</td>
 					<td>Scholarship Holder, Wittmansche Stipendienstiftung and
-						Nicolaus Fonds (since 2012)</td>
+						Nicolaus Fonds (2012-2013)</td>
 				</tr>
 				<tr>
 					<td>Journalism</td>
@@ -538,10 +543,29 @@ h3:before {
 	<script src="http://code.jquery.com/jquery-latest.js"></script>
 	<script src="lib/bootstrap/js/bootstrap.js"></script>
 	<script type='text/javascript'>
+		function setProgressBar(startAnimation) {
+			startTime = new Date(2014,0,15).getTime();
+			currentTime = new Date().getTime();
+			endTime = new Date(2018,0,15).getTime();
+			passedRatio = Math.min((currentTime - startTime) / (endTime - startTime), 1);
+			passedRatio = Math.round(passedRatio * 100);
+			
+			if(startAnimation) {
+				$('#progressometer').css('width', passedRatio+'%');
+			} else {
+				// Tooltip has to be set before animation can be started.
+				$('#progresstooltip').prop('title', 'Progress: ' + passedRatio + '% (Starting from January 2014)');
+			}
+		}
+		setProgressBar(false);
+	</script>
+
+	<script type='text/javascript'>
 		$(document).ready(function() {
 			if ($("[rel=tooltip]").length) {
 				$("[rel=tooltip]").tooltip();
 			}
+			setProgressBar(true);
 		});
 	</script>
 	<script>
